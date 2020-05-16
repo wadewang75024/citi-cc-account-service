@@ -4,11 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.GenerationType;
 
 @Entity
 @Table(name="citi_accounts")
+@NamedQuery(name="Account.findFromAndToAccounts",
+			query="select a from Account a where a.id=:fromAccount or a.id=:toAccount")
 public class Account {
 	
 	@Id

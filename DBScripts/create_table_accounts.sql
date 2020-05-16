@@ -5,7 +5,7 @@ CREATE TABLE citi_accounts
 (account_id bigInt not null AUTO_INCREMENT, 
 customer_id bigInt not null,
 type VARCHAR(10),
-amount DECIMAL(13,2)
+amount DECIMAL(13,2),
 primary key (account_id));
 
 -- Misc
@@ -16,5 +16,5 @@ select * from citi_accounts
 drop table citi_accounts;
 
 insert into citi_accounts
-values (0, 'Wade');
+values (0, 1, "Checking", 100.99);
 
